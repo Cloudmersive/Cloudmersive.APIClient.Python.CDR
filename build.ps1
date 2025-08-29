@@ -1,4 +1,4 @@
-﻿Remove-Item –path ./cloudmersive_spam_api_client –recurse
+﻿Remove-Item –path ./cloudmersive_cdr_api_client –recurse
 
 Invoke-WebRequest -Uri 'https://api.cloudmersive.com/cdr/docs/v1/swagger' -OutFile '.\cdr-api-swagger.json'
 (Get-Content .\cdr-api-swagger.json).replace('localhost', "api.cloudmersive.com") | Set-Content .\cdr-api-swagger.json
@@ -11,8 +11,8 @@ Invoke-WebRequest -Uri 'https://api.cloudmersive.com/cdr/docs/v1/swagger' -OutFi
 
 $newcontent = (Get-Content ./core/replace.py -Raw)
 Write-Host $newcontent
-(Get-Content ./cloudmersive_spam_api_client/api_client.py).replace('if response_type:', $newcontent) | Set-Content ./cloudmersive_spam_api_client/api_client.py
-(Get-Content ./cloudmersive_spam_api_client/rest.py).replace((Get-Content ./core/rest_match.py -Raw), (Get-Content ./core/rest_replace.py -Raw)) | Set-Content ./cloudmersive_spam_api_client/rest.py
+(Get-Content ./cloudmersive_cdr_api_client/api_client.py).replace('if response_type:', $newcontent) | Set-Content ./cloudmersive_cdr_api_client/api_client.py
+(Get-Content ./cloudmersive_cdr_api_client/rest.py).replace((Get-Content ./core/rest_match.py -Raw), (Get-Content ./core/rest_replace.py -Raw)) | Set-Content ./cloudmersive_cdr_api_client/rest.py
 
 $extrasetup = (Get-Content ./extrasetup.py) -join "`n"
 Write-Host $extrasetup

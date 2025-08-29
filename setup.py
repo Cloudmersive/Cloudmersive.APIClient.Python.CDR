@@ -1,9 +1,9 @@
 # coding: utf-8
 
 """
-    spamapi
+    CDR API
 
-    
+    Use the Content Disarm and Reconstruction API to remove security risks from documents by tearing them down, removing unsafe content and rebuilding them.  # noqa: E501
 
     OpenAPI spec version: v1
     
@@ -13,8 +13,8 @@
 
 from setuptools import setup, find_packages  # noqa: H301
 
-NAME = "cloudmersive_spam_api_client"
-VERSION = "3.0.3"
+NAME = "cloudmersive_cdr_api_client"
+VERSION = "3.0.0"
 # To install the library, run the following
 #
 # python setup.py install
@@ -36,15 +36,15 @@ REQUIRES = [
 setup(
     name=NAME,
     version=VERSION,
-    description="spamapi",
+    description="CDR API",
     author_email="",
-    url="https://cloudmersive.com/spam-detection-api",
-    keywords=["Swagger", "spamapi"],
+    url="https://cloudmersive.com/cdr-api",
+    keywords=["Swagger", "CDR API"],
     install_requires=REQUIRES,
     packages=find_packages(),
     include_package_data=True,
     long_description=long_description,
     long_description_content_type='text/markdown'
-    
+    Use the Content Disarm and Reconstruction API to remove security risks from documents by tearing them down, removing unsafe content and rebuilding them.  # noqa: E501
 
 )
