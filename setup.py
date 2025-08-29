@@ -3,7 +3,7 @@
 """
     CDR API
 
-    Use the Content Disarm and Reconstruction API to remove security risks from documents by tearing them down, removing unsafe content and rebuilding them.  # noqa: E501
+    
 
     OpenAPI spec version: v1
     
@@ -45,6 +45,6 @@ setup(
     include_package_data=True,
     long_description=long_description,
     long_description_content_type='text/markdown'
-    Use the Content Disarm and Reconstruction API to remove security risks from documents by tearing them down, removing unsafe content and rebuilding them.  # noqa: E501
+    
 
 )
